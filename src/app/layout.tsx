@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 };
 
 import { Footer } from "@/components/Footer";
+import { PageLoader } from "@/components/PageLoader";
 
 export default function RootLayout({
   children,
@@ -42,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="antialiased font-sans bg-background text-foreground min-h-screen flex flex-col overflow-x-hidden">
+        <PageLoader />
         <main className="flex-1">
           {children}
         </main>

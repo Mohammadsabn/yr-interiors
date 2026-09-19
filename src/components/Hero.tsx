@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Typography } from "@/components/Typography";
 import { PremiumImage } from "@/components/PremiumImage";
 import gsap from "gsap";
-import Link from "next/link";
 import { Header } from "@/components/Header";
 
 const IMAGES = [
