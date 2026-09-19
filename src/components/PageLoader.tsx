@@ -38,21 +38,20 @@ export function PageLoader() {
             ease: "power2.inOut"
           });
         } else {
-          // The Hold (0.4s delay implicitly by adding to timeline)
-          // The Sketch Melt & Wrapper Dissolve
-          tl.to(svgRef.current, {
+          // The Color Reveal: fade background to transparent, revealing reality below
+          tl.to(containerRef.current, {
+            backgroundColor: "rgba(249, 248, 246, 0)", // #F9F8F6 transparent
+            duration: 0.8,
+            ease: "power2.inOut"
+          })
+          // The Line Melt: fade and blur the SVG sketch
+          .to(svgRef.current, {
             scale: 1.15,
             opacity: 0,
             filter: "blur(8px)",
-            duration: 1.2,
-            ease: "power2.inOut",
-            delay: 0.4
-          })
-          .to(containerRef.current, {
-            opacity: 0,
-            duration: 1.5,
-            ease: "power2.inOut"
-          }, "<");
+            duration: 1,
+            ease: "power3.inOut"
+          }, "-=0.2"); // Overlap slightly
         }
       };
 
@@ -61,16 +60,13 @@ export function PageLoader() {
           triggerExitSequence();
         } else {
           window.addEventListener("load", triggerExitSequence, { once: true });
-          // Fallback if window load never fires
           timeoutId = setTimeout(triggerExitSequence, 2000);
         }
       };
 
       if (!prefersReducedMotion) {
-        // SVG Path Drawing Animation
         const paths = gsap.utils.toArray(".arch-line") as SVGPathElement[] | SVGLineElement[];
         
-        // Initialize strokeDasharray and offset for all paths
         paths.forEach((path) => {
           const length = "getTotalLength" in path ? path.getTotalLength() : 1000;
           gsap.set(path, {
@@ -82,7 +78,7 @@ export function PageLoader() {
         // Step 1: Draw the lines
         gsap.to(".arch-line", {
           strokeDashoffset: 0,
-          duration: 2,
+          duration: 1.5,
           ease: "power3.inOut",
           stagger: {
             amount: 0.5,
