@@ -34,6 +34,7 @@ export const metadata: Metadata = {
 
 import { Footer } from "@/components/Footer";
 import { PageLoader } from "@/components/PageLoader";
+import { CookieConsent } from "@/components/CookieConsent";
 
 export default function RootLayout({
   children,
@@ -48,6 +49,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

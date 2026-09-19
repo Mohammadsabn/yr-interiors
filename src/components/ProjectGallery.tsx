@@ -41,13 +41,14 @@ export function ProjectGallery({ images }: { images: string[] }) {
         return (
           <div 
             key={`${src}-${idx}`} 
-            className="gallery-item relative w-full aspect-[4/3] overflow-hidden"
+            className="gallery-item group relative w-full aspect-[4/3] overflow-hidden"
           >
             <div className="absolute inset-0 w-full h-full">
               <PremiumImage 
                 src={src} 
                 alt={`Project gallery image ${idx + 1}`}
                 containerClassName="w-full h-full"
+                className="group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
           </div>

@@ -82,15 +82,16 @@ export function FeaturedProjects() {
                       : "lg:col-span-7 lg:col-start-6 lg:order-2"
                   }`}
                 >
-                  <div className="project-image-container relative w-full aspect-[4/3] overflow-hidden">
+                  <Link href={`/projects/${project.slug}`} className="block project-image-container group relative w-full aspect-[4/3] overflow-hidden">
                     <div className="project-image-asset absolute inset-0 w-full h-full">
                       <PremiumImage 
                         src={project.coverImage} 
                         alt={project.title}
                         containerClassName="w-full h-full"
+                        className="group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
                     </div>
-                  </div>
+                  </Link>
                 </div>
 
                 {/* Text Column */}
