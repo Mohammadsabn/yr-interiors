@@ -1,42 +1,26 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Typography } from "@/components/Typography";
-import { PremiumImage } from "@/components/PremiumImage";
 import gsap from "gsap";
 import { Header } from "@/components/Header";
 
-const IMAGES = [
-  "/hero-interior.jpg",
-  "/hero-interior-2.jpg",
-  "/hero-interior-3.jpg",
-];
-
 export function Hero() {
-  const [currentImage, setCurrentImage] = useState(0);
   const textRef0 = useRef<HTMLDivElement>(null);
   const textRef1 = useRef<HTMLDivElement>(null);
   const textRef2 = useRef<HTMLDivElement>(null);
   const textRef3 = useRef<HTMLDivElement>(null);
-  const imageContainerRef = useRef<HTMLDivElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
   const uiRef = useRef<HTMLDivElement>(null);
-
-  // Auto-slide effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % IMAGES.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   // GSAP Entrance Animation
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      // Image Reveal
+      // Video Reveal
       tl.fromTo(
-        imageContainerRef.current,
+        videoContainerRef.current,
         { scale: 1.05, opacity: 0 },
         { scale: 1, opacity: 1, duration: 2.5, ease: "power3.out" },
         0
@@ -72,27 +56,22 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[100dvh] overflow-hidden bg-neutral-900">
+    <section className="relative w-full min-h-[100dvh] overflow-hidden bg-[#121211]">
       
-      {/* Background Image Slider */}
-      <div ref={imageContainerRef} className="absolute inset-0 z-0">
-        {IMAGES.map((src, idx) => (
-          <div 
-            key={src}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-[2000ms] ease-in-out ${
-              currentImage === idx ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
-          >
-            <PremiumImage 
-              src={src} 
-              alt={`Premium contemporary interior design space ${idx + 1}`}
-              containerClassName="w-full h-full"
-              priority={idx === 0}
-            />
-          </div>
-        ))}
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40 z-20 pointer-events-none" />
+      {/* Background Video */}
+      <div ref={videoContainerRef} className="absolute inset-0 z-0">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/hero-interior.jpg"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        {/* Sophisticated Gradient & Dark Overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/60 via-transparent to-black/20 z-20 pointer-events-none" />
       </div>
 
       {/* Floating Header */}
@@ -142,22 +121,6 @@ export function Hero() {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Slider Indicators */}
-      <div className="absolute bottom-8 left-0 right-0 z-40 flex items-center justify-center gap-4">
-        {IMAGES.map((_, idx) => (
-          <button 
-            key={idx}
-            onClick={() => setCurrentImage(idx)}
-            className="group py-2 px-1 focus:outline-none"
-            aria-label={`Go to slide ${idx + 1}`}
-          >
-            <div className={`h-[2px] transition-all duration-500 ease-out ${
-              currentImage === idx ? "w-8 bg-white" : "w-4 bg-white/40 group-hover:bg-white/60"
-            }`} />
-          </button>
-        ))}
       </div>
     </section>
   );

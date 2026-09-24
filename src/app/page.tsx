@@ -2,7 +2,6 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
-import { DesignYourSpace } from "@/components/DesignYourSpace";
 
 export default function Home() {
   return (
@@ -30,7 +29,6 @@ export default function Home() {
       <About />
       <Services />
       <FeaturedProjects />
-      <DesignYourSpace />
     </main>
   );
 }

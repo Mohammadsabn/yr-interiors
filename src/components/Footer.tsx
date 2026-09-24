@@ -121,8 +121,7 @@ export function Footer() {
               <p className="text-[#f9f8f6] text-xs tracking-widest uppercase mb-2">Expertise</p>
               <span className="hover:text-white transition-colors cursor-pointer w-fit">Residential Interiors</span>
               <span className="hover:text-white transition-colors cursor-pointer w-fit">Commercial Interiors</span>
-              <span className="hover:text-white transition-colors cursor-pointer w-fit">Turnkey Solutions</span>
-              <span className="hover:text-white transition-colors cursor-pointer w-fit">Custom Furniture</span>
+              <span className="hover:text-white transition-colors cursor-pointer w-fit">Bespoke Furniture Manufacturing</span>
             </div>
 
             {/* Column 4: Contact Us (Spans 3) */}

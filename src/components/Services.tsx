@@ -2,7 +2,9 @@
 
 import React, { useEffect, useRef } from "react";
 import { Typography } from "@/components/Typography";
-import { services } from "@/data/services";
+import { servicesData } from "@/data/servicesData";
+import Link from "next/link";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -13,11 +15,11 @@ export function Services() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      const rows = gsap.utils.toArray(".service-row");
-      if (rows.length > 0) {
+      const cards = gsap.utils.toArray(".bento-card");
+      if (cards.length > 0) {
         gsap.fromTo(
-          rows,
-          { y: 30, opacity: 0 },
+          cards,
+          { y: 50, opacity: 0 },
           {
             y: 0,
             opacity: 1,
@@ -26,7 +28,7 @@ export function Services() {
             ease: "power3.out",
             scrollTrigger: {
               trigger: containerRef.current,
-              start: "top 80%",
+              start: "top 75%",
             },
           }
         );
@@ -36,46 +38,70 @@ export function Services() {
     return () => ctx.revert();
   }, []);
 
+  // Map the span columns based on index as per spec
+  const getColSpan = (idx: number) => {
+    switch (idx) {
+      case 0: return "md:col-span-7";
+      case 1: return "md:col-span-5";
+      case 2: return "md:col-span-4";
+      case 3: return "md:col-span-8";
+      default: return "md:col-span-12";
+    }
+  };
+
   return (
-    <section ref={containerRef} className="w-full bg-background py-32 lg:py-48 px-6 sm:px-12 lg:px-24">
+    <section id="services" ref={containerRef} className="w-full bg-[#1c1b1a] py-32 lg:py-48 px-6 sm:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
-        <Typography variant="label" className="mb-16 text-neutral-500 block uppercase tracking-[0.2em] text-xs">
-          Studio Services
-        </Typography>
+        <div className="text-center mb-16 lg:mb-24">
+          <Typography variant="h2" className="text-3xl md:text-5xl lg:text-6xl text-white font-serif tracking-wider mb-6">
+            OUR CORE COMPETENCIES
+          </Typography>
+          <p className="text-white/70 max-w-2xl mx-auto text-sm md:text-base">
+            End-to-end mastery in design, manufacturing, and execution for elite residential and commercial spaces.
+          </p>
+        </div>
 
-        <div className="flex flex-col border-b border-neutral-300">
-          {services.map((service, idx) => (
-            <div 
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          {servicesData.map((service, idx) => (
+            <Link 
+              href={`/services/${service.slug}`}
               key={service.id}
-              className="service-row group flex flex-col md:flex-row items-start md:items-center justify-between border-t border-neutral-300 py-8 lg:py-12 hover:bg-black/5 transition-colors duration-300 cursor-pointer"
+              className={`bento-card group relative block overflow-hidden rounded-2xl border border-white/10 hover:border-white/30 transition-all duration-500 h-[400px] lg:h-[500px] ${getColSpan(idx)}`}
             >
-              {/* Left: Index */}
-              <div className="w-full md:w-[15%] mb-4 md:mb-0">
-                <Typography variant="span" className="text-neutral-400 font-medium text-xs tracking-[0.2em]">
-                  [ {String(idx + 1).padStart(2, "0")} ]
-                </Typography>
+              {/* Background Image */}
+              <div className="absolute inset-0 w-full h-full">
+                <Image
+                  src={service.heroImage}
+                  alt={service.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
               </div>
 
-              {/* Center: Title */}
-              <div className="w-full md:w-[50%] mb-4 md:mb-0">
-                <Typography 
-                  variant="h2" 
-                  className="text-3xl md:text-5xl lg:text-6xl text-foreground transform transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] lg:group-hover:translate-x-6"
-                >
-                  {service.title}
-                </Typography>
-              </div>
+              {/* Dark Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-              {/* Right: Description & Arrow */}
-              <div className="w-full md:w-[35%] flex justify-between items-center">
-                <Typography variant="p" className="text-neutral-600 max-w-sm text-sm lg:text-base pr-4">
-                  {service.shortDescription}
-                </Typography>
-                <div className="flex-shrink-0 text-foreground opacity-100 translate-x-0 lg:opacity-0 lg:-translate-x-4 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 transition-all duration-500">
-                  <span className="text-xl">↗</span>
+              {/* Content */}
+              <div className="absolute inset-0 p-8 flex flex-col justify-between z-10 text-white">
+                <div className="flex justify-between items-start">
+                  <Typography variant="span" className="font-medium text-xs tracking-[0.2em] text-white/60">
+                    [ {String(idx + 1).padStart(2, "0")} ]
+                  </Typography>
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 bg-white/5 backdrop-blur-sm">
+                    <span className="text-white text-lg leading-none">↗</span>
+                  </div>
+                </div>
+
+                <div>
+                  <Typography variant="h3" className="text-2xl md:text-3xl lg:text-4xl font-serif mb-3">
+                    {service.title}
+                  </Typography>
+                  <p className="text-white/70 text-sm max-w-sm line-clamp-2">
+                    {service.shortDescription}
+                  </p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
