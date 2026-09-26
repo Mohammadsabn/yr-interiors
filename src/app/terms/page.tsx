@@ -3,8 +3,8 @@ import { Typography } from "@/components/Typography";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | YR Interiors & Furnitures",
-  description: "Terms of service and contract conditions for YR Interiors & Furnitures, Bangalore.",
+  title: "Terms & Conditions | YRG Ventures",
+  description: "Terms of service and contract conditions for YRG Ventures, Bangalore.",
 };
 
 export default function TermsPage() {
@@ -23,14 +23,14 @@ export default function TermsPage() {
           <section>
             <h2 className="text-white text-xl font-serif mb-4">1. Agreement to Terms</h2>
             <p>
-              These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;), and YR Interiors &amp; Furnitures (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), concerning your access to and use of our website as well as any related interior design, architectural, and turnkey services we provide. By accessing the site or engaging our services, you agree that you have read, understood, and agreed to be bound by all of these Terms and Conditions.
+              These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;), and YRG Ventures (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), concerning your access to and use of our website as well as any related interior design, architectural, and turnkey services we provide. By accessing the site or engaging our services, you agree that you have read, understood, and agreed to be bound by all of these Terms and Conditions.
             </p>
           </section>
 
           <section>
             <h2 className="text-white text-xl font-serif mb-4">2. Interior Design & Turnkey Services</h2>
             <p className="mb-4">
-              All architectural, interior design, and execution services are subject to the specific terms detailed in the formal contract signed between the client and YR Interiors & Furnitures prior to project commencement. 
+              All architectural, interior design, and execution services are subject to the specific terms detailed in the formal contract signed between the client and YRG Ventures prior to project commencement. 
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Initial consultations provide general guidance; binding scopes of work require executed contracts.</li>
@@ -56,7 +56,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-white text-xl font-serif mb-4">5. Governing Law and Jurisdiction</h2>
             <p>
-              These Terms shall be governed by and defined following the laws of India. YR Interiors & Furnitures and yourself irrevocably consent that the courts of Bangalore, Karnataka shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms or the execution of our interior design contracts.
+              These Terms shall be governed by and defined following the laws of India. YRG Ventures and yourself irrevocably consent that the courts of Bangalore, Karnataka shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms or the execution of our interior design contracts.
             </p>
           </section>
 

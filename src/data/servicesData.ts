@@ -28,7 +28,7 @@ export const servicesData: ServiceDetail[] = [
     tagline: "Curated residential and commercial spaces that blend warmth, comfort, and architectural precision.",
     shortDescription: "Our interior design services focus on creating deeply personal sanctuaries that reflect your lifestyle. From concept to execution, we blend aesthetic elegance with functional living.",
     heroImage: "/services/interior/hero.jpg",
-    detailedDescription: "YR Interiors specializes in crafting premium, deeply personal spaces that transcend trends. We believe in architectural precision, working closely with clients to deliver environments that are equally breathtaking and functionally intelligent.",
+    detailedDescription: "YRG Ventures specializes in crafting premium, deeply personal spaces that transcend trends. We believe in architectural precision, working closely with clients to deliver environments that are equally breathtaking and functionally intelligent.",
     offeringsTitle: "Custom Interior Solutions",
     offerings: [
       {
@@ -64,9 +64,9 @@ export const servicesData: ServiceDetail[] = [
     slug: "furniture",
     title: "Bespoke Furniture Manufacturing",
     tagline: "Master craftsmanship meets contemporary design for custom furniture tailored to your exact spatial requirements.",
-    shortDescription: "Under YR Ventures, our bespoke furniture service delivers unique, high-quality manufacturing designed specifically for your space and functional needs.",
+    shortDescription: "Under YRG Ventures, our bespoke furniture service delivers unique, high-quality manufacturing designed specifically for your space and functional needs.",
     heroImage: "/services/furniture/hero.png",
-    detailedDescription: "Mass-produced furniture often fails to align with true architectural vision. At YR Ventures, we manufacture bespoke furniture designed exclusively for your space. Combining exceptional materials with masterful craftsmanship, we deliver pieces that become the defining elements of a room.",
+    detailedDescription: "Mass-produced furniture often fails to align with true architectural vision. At YRG Ventures, we manufacture bespoke furniture designed exclusively for your space. Combining exceptional materials with masterful craftsmanship, we deliver pieces that become the defining elements of a room.",
     offeringsTitle: "Furniture Made for Your Space",
     offerings: [
       {

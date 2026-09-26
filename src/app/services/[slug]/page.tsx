@@ -24,15 +24,15 @@ export async function generateMetadata({
 
   if (!service) {
     return {
-      title: "Service Not Found - YR Interiors",
+      title: "Service Not Found - YRG Ventures",
     };
   }
 
   return {
-    title: `${service.title} - YR Interiors & Furnitures`,
+    title: `${service.title} - YRG Ventures`,
     description: service.shortDescription,
     openGraph: {
-      title: `${service.title} - YR Interiors`,
+      title: `${service.title} - YRG Ventures`,
       description: service.shortDescription,
       images: [{ url: service.heroImage }],
     },

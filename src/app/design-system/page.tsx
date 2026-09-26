@@ -13,7 +13,7 @@ export default function DesignSystemPage() {
         <Container>
           <Typography variant="h1" className="mb-4">Design System</Typography>
           <Typography variant="p" className="max-w-2xl text-neutral-600">
-            This verification page demonstrates the foundational design tokens, typography, and base components for YR Interiors & Furnitures.
+            This verification page demonstrates the foundational design tokens, typography, and base components for YRG Ventures.
           </Typography>
         </Container>
       </Section>

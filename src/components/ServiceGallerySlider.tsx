@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PremiumImage } from "@/components/PremiumImage";
 import { Typography } from "@/components/Typography";
 
@@ -28,7 +28,7 @@ export function ServiceGallerySlider({ images }: ServiceGallerySliderProps) {
     if (!el) return;
 
     let animationFrameId: number;
-    let speed = 1; // Pixels per frame
+    const speed = 1; // Pixels per frame
 
     const scrollLoop = () => {
       // Only auto-scroll if user isn't hovering, dragging, or wheel-scrolling

@@ -14,16 +14,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "YR Interiors & Furnitures | Premium Interior Design",
-    template: "%s | YR Interiors",
+    default: "YRG Ventures | Premium Interior Design",
+    template: "%s | YRG Ventures",
   },
   description: "Transform your space with thoughtfully designed interiors and quality custom furniture tailored to your lifestyle. Based in Bangalore.",
   keywords: ["Interior Design", "Custom Furniture", "Turnkey Solutions", "Commercial Interiors", "Bangalore Interior Designers"],
   openGraph: {
-    title: "YR Interiors & Furnitures | Premium Interior Design",
+    title: "YRG Ventures | Premium Interior Design",
     description: "Transform your space with thoughtfully designed interiors and quality custom furniture tailored to your lifestyle. Based in Bangalore.",
-    url: "https://yrinteriors.com",
-    siteName: "YR Interiors & Furnitures",
+    url: "https://yrgventures.in",
+    siteName: "YRG Ventures",
     locale: "en_IN",
     type: "website",
   },

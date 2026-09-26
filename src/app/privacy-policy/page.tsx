@@ -3,8 +3,8 @@ import { Typography } from "@/components/Typography";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | YR Interiors & Furnitures",
-  description: "Privacy Policy and Data Protection guidelines for YR Interiors & Furnitures, Bangalore.",
+  title: "Privacy Policy | YRG Ventures",
+  description: "Privacy Policy and Data Protection guidelines for YRG Ventures, Bangalore.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-white text-xl font-serif mb-4">1. Introduction</h2>
             <p>
-              Welcome to YR Interiors &amp; Furnitures (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). We are committed to protecting your personal information and your right to privacy. This Privacy Policy governs the manner in which we collect, use, maintain, and disclose information collected from users of our website and services, in accordance with the Information Technology Act, 2000 and applicable Indian data protection norms.
+              Welcome to YRG Ventures (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). We are committed to protecting your personal information and your right to privacy. This Privacy Policy governs the manner in which we collect, use, maintain, and disclose information collected from users of our website and services, in accordance with the Information Technology Act, 2000 and applicable Indian data protection norms.
             </p>
           </section>
 
@@ -72,11 +72,11 @@ export default function PrivacyPolicyPage() {
               If you have questions or comments about this Privacy Policy, you may contact our Bangalore studio at:
             </p>
             <address className="not-italic mt-4 p-6 bg-white/5 border border-white/10 rounded-lg">
-              <strong className="text-white block mb-2">YR Interiors & Furnitures</strong>
+              <strong className="text-white block mb-2">YRG Ventures</strong>
               No.15, 3rd cross, Kasthuriba nagar,<br />
               Ashwathkatte road, Bangalore 560026<br />
               Karnataka, India<br /><br />
-              Email: <a href="mailto:hello@yrinteriors.com" className="text-white hover:underline">hello@yrinteriors.com</a><br />
+              Email: <a href="mailto:info@yrventures.in" className="text-white hover:underline">info@yrventures.in</a><br />
               Phone: <a href="tel:+916361464303" className="text-white hover:underline">+91 6361464303</a>
             </address>
           </section>

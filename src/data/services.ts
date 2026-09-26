@@ -39,10 +39,10 @@ export const services: Service[] = [
   },
   {
     id: "bespoke-furniture",
-    title: "Bespoke Furniture Manufacturing (YR Ventures)",
+    title: "Bespoke Furniture Manufacturing (YRG Ventures)",
     slug: "bespoke-furniture",
     shortDescription: "Master craftsmanship meets contemporary design for custom furniture tailored to your exact spatial requirements.",
-    detailedDescription: "Under YR Ventures, our bespoke furniture service delivers unique, high-quality manufacturing designed specifically for your space and functional needs.",
+    detailedDescription: "Under YRG Ventures, our bespoke furniture service delivers unique, high-quality manufacturing designed specifically for your space and functional needs.",
     image: "/hero-interior.jpg",
     features: [
       "Custom wardrobes",

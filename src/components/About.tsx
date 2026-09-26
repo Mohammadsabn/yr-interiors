@@ -82,7 +82,7 @@ export function About() {
             <div ref={imageRef} className="absolute inset-0 w-full h-full">
               <PremiumImage 
                 src="/about-interior.png" 
-                alt="YR Interiors Philosophy"
+                alt="YRG Ventures Philosophy"
                 containerClassName="w-full h-full"
               />
             </div>

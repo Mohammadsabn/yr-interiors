@@ -149,7 +149,7 @@ export function PageLoader() {
         </svg>
       </div>
       <div className="absolute bottom-12 uppercase tracking-[0.3em] text-xs text-[#4A4A4A]/50 font-medium font-sans">
-        YR Interiors
+        YRG Ventures
       </div>
     </div>
   );
