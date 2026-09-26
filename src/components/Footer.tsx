@@ -19,10 +19,10 @@ export function Footer() {
   };
 
   return (
-    <footer id="contact" className="w-full relative mt-32">
+    <footer id="contact" className="w-full relative mt-48 lg:mt-32">
       {/* The Floating Newsletter CTA Card */}
-      <div className="absolute left-0 right-0 -top-24 z-20 flex justify-center px-6 lg:px-20">
-        <div className="bg-[#1c1b1a] border border-white/10 rounded-2xl shadow-2xl p-8 lg:p-12 w-full max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div className="absolute left-0 right-0 -top-32 lg:-top-24 z-20 flex justify-center px-4 sm:px-6 lg:px-20">
+        <div className="bg-[#1c1b1a] border border-white/10 rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-12 w-full max-w-7xl flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 lg:gap-8 text-center lg:text-left">
           
           {/* Left Side: Illustration & Text */}
           <div className="flex items-center gap-6 lg:gap-8 lg:w-3/5">
@@ -77,11 +77,11 @@ export function Footer() {
       </div>
 
       {/* Main Footer Wrapper */}
-      <div className="w-full bg-[#121211] text-white pt-48 pb-16 px-6 lg:px-20 relative z-10">
+      <div className="w-full bg-[#121211] text-white pt-72 sm:pt-64 lg:pt-48 pb-16 px-6 lg:px-20 relative z-10">
         <div className="max-w-7xl mx-auto">
           
           {/* Main Footer Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 text-sm text-white/60 text-left">
+          <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-12 space-y-12 md:space-y-0 md:gap-12 lg:gap-8 text-sm text-white/60 text-left">
             
             {/* Column 1: Brand (Spans 4) */}
             <div className="flex flex-col items-start lg:col-span-4">
@@ -146,20 +146,20 @@ export function Footer() {
           </div>
 
           {/* Sub-Footer Bar */}
-          <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs tracking-wider text-white/40">
-            <p className="text-center md:text-left">
+          <div className="border-t border-white/10 mt-16 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-xs tracking-wider text-white/40">
+            <p className="text-center lg:text-left whitespace-normal">
               &copy; {new Date().getFullYear()} YR Interiors & Furnitures. All rights reserved.
             </p>
             
-            <div className="flex items-center gap-4 whitespace-nowrap overflow-x-auto w-full md:w-auto justify-center">
+            <div className="flex flex-wrap items-center gap-4 w-full lg:w-auto justify-center">
               <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <span className="text-white/20">|</span>
+              <span className="text-white/20 hidden sm:inline">|</span>
               <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
-              <span className="text-white/20">|</span>
+              <span className="text-white/20 hidden sm:inline">|</span>
               <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>
             </div>
             
-            <p className="text-center md:text-right whitespace-nowrap">
+            <p className="text-center lg:text-right whitespace-normal">
               Designed and developed by <a href="https://initwave.in/" target="_blank" rel="noopener noreferrer" className="text-white hover:underline transition-colors">InitWave Technologies</a>
             </p>
           </div>

@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased font-sans bg-background text-foreground min-h-screen flex flex-col overflow-x-hidden">
+      <body className="antialiased font-sans bg-background text-foreground min-h-screen flex flex-col overflow-x-hidden transition-colors duration-300 ease-in-out">
         <PageLoader />
         <main className="flex-1">
           {children}
